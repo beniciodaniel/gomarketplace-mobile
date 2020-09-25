@@ -31,6 +31,7 @@ interface Product {
 const Dashboard: React.FC = () => {
   const { addToCart } = useCart();
 
+  // só para listagem
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -45,7 +46,8 @@ const Dashboard: React.FC = () => {
   }, []);
 
   function handleAddToCart(item: Product): void {
-    // TODO
+    // TODO-02
+    addToCart(item);
   }
 
   return (
